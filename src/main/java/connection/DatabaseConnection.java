@@ -5,9 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConnection {
-	private static final String URL = "urls_example";
-	private static final String USER = "example";
-	private static final String PASSWORD = "example";
+
 
 	public static Connection getConnection() {
 		try {
