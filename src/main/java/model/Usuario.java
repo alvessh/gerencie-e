@@ -1,28 +1,23 @@
 package model;
 
+import java.util.UUID;
+
 public class Usuario {
-	private int id;
-	private String nome;
+	private String id;
 	private String email;
 	private String senha;
+	private String idEmpresa;
 
 	public Usuario() {
+		this.id = UUID.randomUUID().toString();
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
 	}
 
 	public String getEmail() {
@@ -39,5 +34,13 @@ public class Usuario {
 
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+
+	public String getIdEmpresa() {
+		return idEmpresa;
+	}
+
+	public void setIdEmpresa(String idEmpresa) {
+		this.idEmpresa = idEmpresa;
 	}
 }
