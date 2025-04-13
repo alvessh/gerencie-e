@@ -15,7 +15,7 @@ public class ProdutoTest {
 		produto.setQuantidade(10);
 		produto.setValorCusto(600.00);
 		produto.setValorVenda(850.00);
-		produto.setIdEmpresa("ID_DA_EMPRESA");
+		produto.setIdEmpresa("39ca2a32-d227-4826-bd69-bfaceeb82541");
 		produto.setQuantidadeEstoque(10);
 
 		ProdutoDAO produtoDAO = new ProdutoDAO(conn);

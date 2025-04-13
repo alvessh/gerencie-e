@@ -11,8 +11,8 @@ public class ProdutoMovimentacaoTest {
 		Connection conn = DatabaseConnection.getConnection();
 
 		ProdutoMovimentacao mov = new ProdutoMovimentacao();
-		mov.setIdProduto("ID_DO_PRODUTO");
-		mov.setIdEmpresa("ID_DA_EMPRESA");
+		mov.setIdProduto("dd0a22b5-e507-4580-bb39-1014f61fc77c");
+		mov.setIdEmpresa("39ca2a32-d227-4826-bd69-bfaceeb82541");
 		mov.setQuantidadeMovimentada(5);
 		mov.setValorUnitario(850.00);
 		mov.setTipoMovimentacao("venda");

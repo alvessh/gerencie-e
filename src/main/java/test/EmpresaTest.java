@@ -11,7 +11,7 @@ public class EmpresaTest {
 		Connection conn = DatabaseConnection.getConnection();
 		
 		Empresa empresa = new Empresa();
-		empresa.setNomeRazao("Arroz");
+		empresa.setNomeRazao("Arroz 2");
 		empresa.setApelidoFantasia("Batata");
 		empresa.setCpfCnpj("75.923.047/0001-26");
 		empresa.setBairro("Sla");

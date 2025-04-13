@@ -13,7 +13,7 @@ public class UsuarioTest {
 		Usuario usuario = new Usuario();
 		usuario.setEmail("usuario@empresa.com");
 		usuario.setSenha("123456");
-		usuario.setIdEmpresa("dfjaskdfjalsdjfk");
+		usuario.setIdEmpresa("39ca2a32-d227-4826-bd69-bfaceeb82541");
 
 		UsuarioDAO usuarioDAO = new UsuarioDAO(conn);
 		usuarioDAO.cadastrar(usuario);
