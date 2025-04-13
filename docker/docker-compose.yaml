@@ -1,0 +1,10 @@
+services:
+  db:
+    image: mysql:9
+    ports:
+      - 40306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: batata
+      MYSQL_DATABASE: arroz
+      MYSQL_USER: feijao
+      MYSQL_PASSWORD: arroz_com_Batata
