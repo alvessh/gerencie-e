@@ -7,6 +7,7 @@ public class Usuario {
 	private String email;
 	private String senha;
 	private String idEmpresa;
+	private Integer ativo; //0 = INATIVO, ATIVO  = 1
 
 	public Usuario() {
 		this.id = UUID.randomUUID().toString();
