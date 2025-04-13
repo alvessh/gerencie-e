@@ -2,7 +2,10 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.util.ArrayList;
+import java.util.List;
 
+import model.Empresa;
 import model.Produto;
 
 public class ProdutoDAO {
@@ -13,7 +16,7 @@ public class ProdutoDAO {
 	}
 
 	public void cadastrar(Produto produto) {
-		String sql = "INSERT INTO produto (id, descricao, quantidade, valorcusto, valorvenda, id_empresa, quantidadeestoque) "
+		String sql = "INSERT INTO produto (id, descricao, quantidade, valorcusto, valorvenda, id_empresa, quantidade_estoque) "
 				+ "VALUES (?, ?, ?, ?, ?, ?, ?)";
 
 		try {
@@ -31,5 +34,22 @@ public class ProdutoDAO {
 		} catch (Exception e) {
 			System.out.println("Erro ao cadastrar produto: " + e.getMessage());
 		}
+	}
+	
+	public void atualizar(Produto produto) {
+		//atualizar o Produto UPDATE
+	}
+	
+	public List<Produto> listar() {
+		//retorna todos os Produtos cadastros SELECT
+		return new ArrayList<Produto>();
+	}
+	public Produto listarPorId(String id) {
+		// retornar o Produto pelo o id informado SELECT
+		return new Produto();
+	}
+	
+	public void inativar(String id) {
+		// inativar  UPDATE
 	}
 }

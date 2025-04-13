@@ -2,6 +2,8 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.util.ArrayList;
+import java.util.List;
 
 import model.Empresa;
 
@@ -42,5 +44,22 @@ public class EmpresaDAO {
 		} catch (Exception e) {
 			System.out.println("Erro ao cadastrar empresa: " + e.getMessage());
 		}
+	}
+	
+	public void atualizar(Empresa empresa) {
+		//atualizar o Empresa UPDATE
+	}
+	
+	public List<Empresa> listar() {
+		//retorna todos os Empresas cadastros SELECT
+		return new ArrayList<Empresa>();
+	}
+	public Empresa listarPorId(String id) {
+		// retornar o Empresa pelo o id informado SELECT
+		return new Empresa();
+	}
+	
+	public void inativar(String id) {
+		// inativar  UPDATE
 	}
 }
