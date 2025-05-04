@@ -54,3 +54,9 @@ CREATE TABLE produtomovimentacao (
     FOREIGN KEY (id_produto) REFERENCES produto(id),
     FOREIGN KEY (id_empresa) REFERENCES empresa(id)
 );
+
+-- Adiciona o campo 'ativo' as tabelas
+ALTER TABLE empresa ADD COLUMN ativo BOOLEAN DEFAULT true;
+ALTER TABLE usuario ADD COLUMN ativo BOOLEAN DEFAULT true;
+ALTER TABLE produto ADD COLUMN ativo BOOLEAN DEFAULT true;
+ALTER TABLE produtomovimentacao ADD COLUMN ativo BOOLEAN DEFAULT true;
