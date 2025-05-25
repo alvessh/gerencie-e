@@ -108,4 +108,26 @@ public class UsuarioDAO {
 			System.out.println("Erro ao inativar usuário: " + e.getMessage());
 		}
 	}
+	
+	public Usuario buscarPorEmailESenha(String email, String senha) {
+		String sql = "SELECT * FROM usuario WHERE email = ? AND senha = ?";
+		try {
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, email);
+			ps.setString(2, senha);
+			var rs = ps.executeQuery();
+
+			if (rs.next()) {
+				Usuario u = new Usuario();
+				u.setId(rs.getString("id"));
+				u.setEmail(rs.getString("email"));
+				u.setSenha(rs.getString("senha"));
+				u.setIdEmpresa(rs.getString("id_empresa"));
+				return u;
+			}
+		} catch (Exception e) {
+			System.out.println("Erro ao buscar usuário: " + e.getMessage());
+		}
+		return null;
+	}
 }
