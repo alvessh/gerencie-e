@@ -25,6 +25,7 @@ public class DatabaseConnection {
 			String user = props.getProperty("db.user");
 			String password = props.getProperty("db.password");
 
+			Class.forName("com.mysql.cj.jdbc.Driver"); // força o carregamento do driver
 			Connection conn = DriverManager.getConnection(url, user, password);
 			System.out.println("Conexão com o banco de dados estabelecida com sucesso! hehe");
 			return conn;
